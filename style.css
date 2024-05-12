@@ -1,0 +1,140 @@
+/* Reset default styles and set global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #17252A;
+}
+
+/* Header styles */
+header {
+    background-color: #17252A;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Navigation styles */
+.navbar {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    background-color: #17252A;
+    padding: 10px 20px;
+    margin-top: 15px;
+    margin-left: 75px;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    margin-right: 170px;
+}
+
+.social-links a {
+    margin-right: 20px;
+    color: #2b7a78;
+    text-decoration: none;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: flex-end;
+}
+
+.navbar-item {
+    margin-right: 20px;
+    color: #2b7a78;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* CSS */
+.navbar-item.name {
+    color: #def2f1 ;
+    font-size: 28px;
+}
+.navbar-item:hover {
+    color: #def2f1 ; /* Change to your desired hover color */
+}
+.social-links a:hover {
+    color: #def2f1; /* Change to your desired hover color */
+}
+
+/* Section styles */
+section {
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+section h2 {
+    margin-top: 0;
+}
+
+
+/* CSS */
+#Home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text within the section */
+    height: 50vh; /* Adjust the height as needed */
+    
+}
+
+#Home h2 div {
+    margin-bottom: 20px; /* Add space below the heading */
+    font-size: 60px;
+    color: #def2f1;
+    font-family: "Courier New", Courier, monospace;
+}
+
+.first-paragraph {
+    font-family: NTR, sans-serif; /* Font for the first paragraph */
+    margin-bottom: 20px; /* Adds space below the first paragraph */
+    font-size: 35px;
+    color: #def2f1;
+}
+
+.second-paragraph {
+    font-family: 'Varela Round'; /* Font for the second paragraph */
+    font-size: 24px;
+    color: #def2f1;
+    line-height: 1.5;
+}
+
+.typed-out {
+    overflow: hidden;
+    border-right: .15em solid #3AAFA9;
+    animation: typing 3s steps(20, end) forwards, blinking .8s infinite;
+    font-size: 1.6rem;
+    white-space: nowrap;
+    width: 0;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  @keyframes blinking {
+    from { border-color: transparent }
+    to { border-color: #2b7a78; }
+  }
+
+  .nidhi{
+    color: #2b7a78;
+  }
+
+  .heart{
+    color: #3AAFA9 ;
+  }
