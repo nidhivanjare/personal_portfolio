@@ -1,4 +1,3 @@
-/* Reset default styles and set global styles */
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +9,6 @@ body {
     background-color: #17252A;
 }
 
-/* Header styles */
 header {
     background-color: #17252A;
     padding: 20px;
@@ -20,7 +18,6 @@ header {
     align-items: center;
 }
 
-/* Navigation styles */
 .navbar {
     display: flex;
     justify-content: space-between; 
@@ -62,13 +59,12 @@ header {
     font-size: 28px;
 }
 .navbar-item:hover {
-    color: #def2f1 ; /* Change to your desired hover color */
+    color: #def2f1 ;
 }
 .social-links a:hover {
-    color: #def2f1; /* Change to your desired hover color */
+    color: #def2f1;
 }
 
-/* Section styles */
 section {
     padding: 20px;
     margin: 20px 0;
@@ -79,34 +75,32 @@ section h2 {
     margin-top: 0;
 }
 
-
-/* CSS */
 #Home {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
-    text-align: center; /* Center text within the section */
-    height: 50vh; /* Adjust the height as needed */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 50vh;
     
 }
 
 #Home h2 div {
-    margin-bottom: 20px; /* Add space below the heading */
+    margin-bottom: 20px;
     font-size: 60px;
     color: #def2f1;
     font-family: "Courier New", Courier, monospace;
 }
 
 .first-paragraph {
-    font-family: NTR, sans-serif; /* Font for the first paragraph */
-    margin-bottom: 20px; /* Adds space below the first paragraph */
+    font-family: NTR, sans-serif;
+    margin-bottom: 20px;
     font-size: 35px;
     color: #def2f1;
 }
 
 .second-paragraph {
-    font-family: 'Varela Round'; /* Font for the second paragraph */
+    font-family: 'Varela Round';
     font-size: 24px;
     color: #def2f1;
     line-height: 1.5;
@@ -138,3 +132,137 @@ section h2 {
   .heart{
     color: #3AAFA9 ;
   }
+  
+  .mail-button {
+    border: 3px solid #3AAFA9;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 40px;
+    background: #17252A;
+    color: #def2f1;
+    font-family: 'Varela Round';
+    text-decoration: none;
+}
+
+.mail-button:hover {
+    background-color: #3AAFA9;
+}
+
+#about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    width: 100%;
+}
+
+.left, .right {
+    flex: 1;
+    max-width: 50%;
+    width: 50%;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px;
+    margin-left: 250px;
+}
+
+.right {
+    padding: 20px;
+    position: relative;
+    height: auto;
+    text-align: center;
+}
+
+img {
+    max-width: 60%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+#about h2 {
+    color: #def2f1;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+
+.left p {
+    color: #def2f1;
+    font-family: 'Varela Round';
+    font-size: 23px;
+    white-space: pre-line;
+    margin-top: 0;
+}
+
+.left a {
+    color: #3AAFA9;
+    text-decoration: none;
+}
+
+.left .skills-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+.left .skills-group {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.left .skills-group {
+    color: #def2f1;
+    font-family: 'Varela Round';
+    margin-bottom: 5px;
+}
+
+.left .skills-group ul {
+    list-style-type: none;
+    padding: 20px;
+}
+
+.left .skills-group li {
+    color: #def2f1;
+    font-family: 'Varela Round';
+    margin-bottom: 5px;
+}
+
+.para1 {
+    margin-bottom: 20px;
+}
+
+.skills-container ul li {
+    white-space: nowrap;
+}
+
+.skills-container ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.skills-container ul li {
+    position: relative;
+    padding-left: 20px;
+}
+
+.skills-container ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 10px solid #00b894;
+}
