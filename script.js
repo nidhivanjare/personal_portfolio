@@ -18,3 +18,31 @@ window.addEventListener('scroll', function() {
         navbar.style.backgroundColor = '#6A0DAD'; // Restore original color when scrolled to top
     }
 });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Hide all company descriptions except the first one
+    var descriptions = document.querySelectorAll(".company-description");
+    descriptions.forEach(function(description, index) {
+        if (index !== 0) {
+            description.style.display = "none";
+        }
+    });
+
+    // Add click event listeners to company links
+    var companyLinks = document.querySelectorAll(".company-list a");
+    var companyList = document.querySelector(".company-list");
+
+    companyLinks.forEach(function(link) {
+        link.addEventListener("click", function(event) {
+            event.preventDefault();
+            var targetId = link.getAttribute("data-company");
+            var targetCompany = document.getElementById(targetId);
+            descriptions.forEach(function(description) {
+                description.style.display = "none";
+            });
+            targetCompany.style.display = "block";
+        });
+    });
+});
+

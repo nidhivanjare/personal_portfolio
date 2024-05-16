@@ -266,3 +266,44 @@ img {
     border-bottom: 8px solid transparent;
     border-right: 10px solid #00b894;
 }
+
+#experience {
+    display: flex;
+    flex-direction: column; /* Change flex direction to column */
+    align-items: center; /* Align content horizontally */
+    margin-top: 50px; /* Adjust margin-top as needed */
+    padding: 20px; /* Add padding to maintain spacing */
+    margin-right: 900px;
+}
+
+#experience h2 {
+    color: #def2f1;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 50px;
+    margin-bottom: 20px; /* Add margin below the heading */
+}
+
+.company-wrapper {
+    display: flex;
+    align-items: stretch;
+    margin-top: 30px;
+}
+
+.company-list {
+    flex: 1;
+}
+
+.company-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.company-list li {
+    margin-bottom: 10px;
+}
+
+.company-list a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
