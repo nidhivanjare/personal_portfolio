@@ -53,7 +53,6 @@ header {
     font-size: 20px;
 }
 
-/* CSS */
 .navbar-item.name {
     color: #def2f1 ;
     font-size: 28px;
@@ -82,6 +81,7 @@ section h2 {
     align-items: center;
     text-align: center;
     height: 50vh;
+    margin-top: 130px;
     
 }
 
@@ -150,11 +150,12 @@ section h2 {
     background-color: #3AAFA9;
 }
 
+/* about section with a photo */
 #about {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 150px;
+    margin-top: 130px;
     width: 100%;
 }
 
@@ -269,41 +270,132 @@ img {
 
 #experience {
     display: flex;
-    flex-direction: column; /* Change flex direction to column */
-    align-items: center; /* Align content horizontally */
-    margin-top: 50px; /* Adjust margin-top as needed */
-    padding: 20px; /* Add padding to maintain spacing */
-    margin-right: 900px;
+    flex-direction: column; /* Arrange children vertically */
+    align-items: left; /* Center horizontally */
+    margin-top: 130px;
+    width: 100%;
+    margin-left: 270px;
 }
 
 #experience h2 {
     color: #def2f1;
     font-family: 'Courier New', Courier, monospace;
     font-size: 50px;
-    margin-bottom: 20px; /* Add margin below the heading */
+    margin-bottom: 50px; /* Add space below the heading */
 }
 
-.company-wrapper {
+.container {
     display: flex;
-    align-items: stretch;
-    margin-top: 30px;
+    width: 80%;
+    margin-left: 30px;
 }
 
-.company-list {
-    flex: 1;
+.sidebar {
+    width: 20%;
+    border-right: 1px solid #30363D;
+    position: relative;
 }
 
-.company-list ul {
+.content {
+    width: 80%;
+    padding-left: 20px;
+    color: #def2f1;
+    font-family: 'Varela Round';
+    font-size: 21px;
+    margin-right: 20px;
+}
+
+.sidebar ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
-.company-list li {
-    margin-bottom: 10px;
+.sidebar li {
+    padding: 10px 0;
+    cursor: pointer;
+    position: relative;
+    color: #def2f1;
+    font-family: 'Varela Round';
+    font-size: 21px;
+    margin-right: 25px;
 }
 
-.company-list a {
-    text-decoration: none;
-    color: #333;
+.sidebar li.active {
+    color: #3AAFA9;
+}
+
+.experience-item {
+    display: none;
+}
+
+.experience-item.active {
     display: block;
+}
+
+.experience-item h3 {
+    margin: 0;
+    color: #3AAFA9;
+}
+
+.experience-item h3 {
+    margin-top: 10px;
+    font-weight: normal;
+    color: #2b7a78;
+}
+
+.experience-item p {
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+.experience-item ul {
+    list-style: none;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.experience-item li {
+    margin-top: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.experience-item li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 10px solid #00b894;
+}
+
+.line {
+    width: 3px;
+    background-color: #00b894;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    transform: translateX(-50%);
+    transition: top 0.3s, height 0.3s, background-color 0.3s;
+}
+
+#projects {
+    display: flex;
+    flex-direction: column; /* Arrange children vertically */
+    align-items: left; /* Center horizontally */
+    margin-top: 130px;
+    width: 100%;
+    margin-left: 270px;
+}
+
+#projects h2 {
+    color: #def2f1;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 50px;
+    margin-bottom: 50px; /* Add space below the heading */
 }

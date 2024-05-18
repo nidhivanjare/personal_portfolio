@@ -19,30 +19,40 @@ window.addEventListener('scroll', function() {
     }
 });
 
+const sidebarItems = document.querySelectorAll('.sidebar li');
+const experienceItems = document.querySelectorAll('.experience-item');
+const line = document.getElementById('line');
 
-document.addEventListener("DOMContentLoaded", function() {
-    // Hide all company descriptions except the first one
-    var descriptions = document.querySelectorAll(".company-description");
-    descriptions.forEach(function(description, index) {
-        if (index !== 0) {
-            description.style.display = "none";
-        }
-    });
+function updateLinePositionAndColor() {
+    const activeItem = document.querySelector('.sidebar li.active');
+    const color = activeItem.getAttribute('data-color');
+    const rect = activeItem.getBoundingClientRect();
+    const sidebarRect = activeItem.parentElement.getBoundingClientRect();
+    
+    line.style.backgroundColor = color;
+    line.style.top = `${activeItem.offsetTop}px`;
+    line.style.height = `${rect.height}px`;
+}
 
-    // Add click event listeners to company links
-    var companyLinks = document.querySelectorAll(".company-list a");
-    var companyList = document.querySelector(".company-list");
+sidebarItems.forEach(item => {
+    item.addEventListener('click', () => {
+        document.querySelector('.sidebar li.active').classList.remove('active');
+        item.classList.add('active');
 
-    companyLinks.forEach(function(link) {
-        link.addEventListener("click", function(event) {
-            event.preventDefault();
-            var targetId = link.getAttribute("data-company");
-            var targetCompany = document.getElementById(targetId);
-            descriptions.forEach(function(description) {
-                description.style.display = "none";
-            });
-            targetCompany.style.display = "block";
+        const target = item.getAttribute('data-target');
+        experienceItems.forEach(experience => {
+            experience.classList.remove('active');
+            if (experience.id === target) {
+                experience.classList.add('active');
+            }
         });
+
+        updateLinePositionAndColor();
     });
 });
+
+// Initialize line position and color on page load
+window.addEventListener('load', updateLinePositionAndColor);
+// Update line position and color on window resize
+window.addEventListener('resize', updateLinePositionAndColor);
 
