@@ -399,3 +399,67 @@ img {
     font-size: 50px;
     margin-bottom: 50px; /* Add space below the heading */
 }
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin-top: 30px;
+}
+
+.card {
+    background-color: #2b7a78;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.icon-folder {
+    color: #17252A;
+    font-size: 24px;
+}
+
+.card-icons {
+    display: flex;
+    align-items: center;
+}
+
+.card-icons a {
+    margin-left: 10px;
+    color: #17252A;
+    font-size: 24px;
+    transition: opacity 0.3s;
+}
+
+.card-icons a:hover {
+    color: #64ffda;
+}
+
+
+.card-body h3 {
+    margin: 0 0 10px;
+    font-size: 1.25rem;
+    color: #64ffda;
+}
+
+.card-body p {
+    margin: 0 0 10px;
+}
+
+.tech-stack {
+    font-size: 0.875rem;
+    color: #17252A;
+}
